@@ -1,4 +1,5 @@
 import './style.css';
+import Slider from './lib/slider'
 
 const slider = document.querySelector('ul.slider-content')
 const slides = document.querySelectorAll('li.slider-item')
@@ -11,6 +12,9 @@ const arrayDots = Array.from(dots)
 const arraySlides = Array.from(slides)
 
 let activeSlide = 1
+
+const sliderTheme = Slider('#test-slider')
+console.log({ slider: sliderTheme.values })
 
 buttonPrev.addEventListener('click', () => {
   if (activeSlide <= 1) return
