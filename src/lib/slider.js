@@ -4,8 +4,8 @@ export default function Slider(container) {
 
   const _container = document.querySelector(`${container}`)
   const _slides = _container?.querySelectorAll('.slider__item')
-  
-  let _dots
+
+  let _dots = [] // Array Nodes
   let _activeSlide = 1
 
   if (typeof container === 'undefined' || container === '') 
