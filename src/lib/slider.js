@@ -19,6 +19,8 @@ export default function Slider(container) {
   if (_slides.length === 0) 
     throw Error(`Elements with class ".slider__item" must exist inside the "${container}" container.`)
 
+  
+
   const sectionWrapper = document.createElement('section')
   const sectionContent = document.createElement('section')
 
@@ -28,9 +30,6 @@ export default function Slider(container) {
   sectionContent.append(..._slides)
   sectionWrapper.append(...[_btnPrev, sectionContent, _btnNext])
 
-  _container.innerHTML = ''
-  _container.appendChild(sectionWrapper)
-
   const navContainer = document.createElement('nav')
   const navElements = document.createElement('ul')
   
@@ -38,7 +37,8 @@ export default function Slider(container) {
   navElements.className = 'slider__dots'
 
   navContainer.appendChild(navElements)
-  _container.appendChild(navContainer)
+  _container.innerHTML = ''
+  _container.append(...[sectionWrapper, navContainer])
 
   _slides.forEach((slide, index) => {
     const dotElement = document.createElement('button')
