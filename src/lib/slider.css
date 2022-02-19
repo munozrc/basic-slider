@@ -73,6 +73,9 @@
   background-color: #121212;
   opacity: .4;
   transition: opacity .3s ease-in-out;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .slider__dot.active {

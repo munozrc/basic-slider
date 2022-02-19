@@ -46,6 +46,11 @@ export default function Slider(container) {
     dotElement.className = index === 0 ? 'slider__dot active' : 'slider__dot'
     dotElement.dataset.index = index
 
+    dotElement.addEventListener('click', () => {
+      slideTo(index)
+      setActiveDot(index)
+    })
+
     navElements.appendChild(dotElement)
     slide.dataset.index = index
   })
@@ -53,37 +58,31 @@ export default function Slider(container) {
   _dots = _container?.querySelectorAll('nav > ul > .slider__dot')
 
   _btnPrev.addEventListener('click', () => {
-    if (_activeSlide >= 0) _activeSlide--
-    slideTo(sectionContent, _activeSlide)
-    setActiveDot(_dots, _activeSlide)
-    console.log({ _activeSlide })
+    if (_activeSlide > 0) _activeSlide--
+    slideTo(_activeSlide)
+    setActiveDot(_activeSlide)
   })
   
   _btnNext.addEventListener('click', () => {
-    if (_activeSlide <= _slides.length) _activeSlide++
-    slideTo(sectionContent, _activeSlide)
-    setActiveDot(_dots, _activeSlide)
-    console.log({ _activeSlide })
+    if (_activeSlide < _slides.length - 1) _activeSlide++
+    slideTo(_activeSlide)
+    setActiveDot(_activeSlide)
   })
+
+  function slideTo(index) {
+    sectionContent.scrollTo({
+      left: index * sectionContent.offsetWidth
+    })
+  }
+  
+  function setActiveDot(index) {
+    _dots.forEach(dot => {
+      if (+dot.dataset.index === index) dot.classList.add('active')
+      else dot.classList.remove('active')
+    })
+  }
 
   return {
     values: `Slides ${_slides.length}`
   }
-}
-
-function slideTo(content, index) {
-  content.scrollTo({
-    left: index * content.offsetWidth
-  })
-}
-
-// function getSlideSelect(arraySlides, index) {
-//   return arraySlides.findIndex(item => item.dataset.index === index)
-// }
-
-function setActiveDot(arrayDots, index) {
-  arrayDots.forEach(dot => {
-    if (+dot.dataset.index === index) dot.classList.add('active')
-    else dot.classList.remove('active')
-  })
 }
