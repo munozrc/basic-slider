@@ -3,58 +3,35 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/basic-slider/assets/favicon.17e50649.svg" />
+  <link rel="icon" type="image/svg+xml" href="/basic-slider/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic Slider</title>
-  <script type="module" crossorigin src="/basic-slider/assets/index.0ebf8ff4.js"></script>
-  <link rel="stylesheet" href="/basic-slider/assets/index.ee5b998c.css">
+  <title>Demo for Basic Slider with Vanilla JavaScript</title>
+  <script type="module" crossorigin src="/basic-slider/assets/index.50d2acfc.js"></script>
+  <link rel="stylesheet" href="/basic-slider/assets/index.45fd6f09.css">
 </head>
 
 <body>
   <main>
-    <div class="slider">
-      <section class="slider-container">
-        <button class="slider-arrow__left">
-          <svg class="slider-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
-          </svg>
-        </button>
-        <ul class="slider-content">
-          <li class="slider-item" data-index="1">
-            <img class="slider-item-image" src="https://luisherdeth2020.github.io/slider-test/02.jpg"
-              alt="rocks photo" />
-            <p class="slider-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
-          </li>
-          <li class="slider-item" data-index="2">
-            <img class="slider-item-image" src="https://luisherdeth2020.github.io/slider-test/03.jpg"
-              alt="bunny photo" />
-            <p class="slider-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
-          </li>
-          <li class="slider-item" data-index="3">
-            <img class="slider-item-image" src="https://luisherdeth2020.github.io/slider-test/02.jpg"
-              alt="bunny photo" />
-            <p class="slider-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
-          </li>
-          <li class="slider-item" data-index="4">
-            <img class="slider-item-image" src="https://luisherdeth2020.github.io/slider-test/03.jpg"
-              alt="bunny photo" />
-            <p class="slider-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis!</p>
-          </li>
-        </ul>
-        <button class="slider-arrow__right">
-          <svg class="slider-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
-            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
-          </svg>
-        </button>
-      </section>
-      <nav class="slider-nav">
-        <ul class="slider-dots">
-          <button class="slider-dot active" data-index="1" />
-          <button class="slider-dot" data-index="2" />
-          <button class="slider-dot" data-index="3" />
-          <button class="slider-dot" data-index="4" />
-        </ul>
-      </nav>
+    <div id="slider">
+      <button class="slider__btn-prev">
+        <svg class="slider-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+        </svg>
+      </button>
+      <div class="slider__item">
+        <img src="/basic-slider/aedrian.jpg" />
+      </div>
+      <div class="slider__item">
+        <img src="/basic-slider/ian-dziuk.jpg" />
+      </div>
+      <div class="slider__item">
+        <img src="/basic-slider/eugene-golovesov.jpg" />
+      </div>
+      <button class="slider__btn-next">
+        <svg class="slider-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+        </svg>
+      </button>
     </div>
   </main>
   
