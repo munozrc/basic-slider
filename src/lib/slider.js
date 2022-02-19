@@ -41,6 +41,6 @@ export default function Slider(container) {
   _dots = _container?.querySelectorAll('nav > ul > .slider-dot')
 
   return {
-    values: `Slides ${_slides?.length}`
+    values: `Slides ${_slides.length}`
   }
 }
