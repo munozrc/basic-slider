@@ -35,6 +35,13 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/6;
+  overflow: hidden;
+}
+
 .slider {
   display: flex;
   flex-direction: column;
