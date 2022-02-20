@@ -7,6 +7,8 @@
 
 .slider__content {
   display: flex;
+  width: 100%;
+  height: fit-content;
   flex-wrap: nowrap;
   justify-content: normal;
   -ms-overflow-style: none; /* IE and Edge */
@@ -23,12 +25,9 @@
 
 .slider__item {
   scroll-snap-align: start;
-  display: flex;
   flex-shrink: 0;
-  align-items: center;
   width: 100%;
-  min-width: 100%;
-  gap: 30px;
+  display: inline-block;
 }
 
 .slider__btn-prev,
