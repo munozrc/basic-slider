@@ -35,7 +35,7 @@ First you need to copy the `slider.js` and `slider.css` files to your project. Y
 ***JavaScript***
 
 ```javascript
-import Slider from './lib/slider'
+import Slider from './slider'
 
 // Set settings for slider
 const config = {
