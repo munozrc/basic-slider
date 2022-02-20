@@ -12,6 +12,12 @@
   },
   "devDependencies": {
     "gh-pages": "3.2.3",
+    "standard": "16.0.4",
     "vite": "2.7.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
