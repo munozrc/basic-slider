@@ -7,7 +7,7 @@ This is a basic slider in vanilla JavaScript. [demo](https://munozrc.github.io/b
 
 ## How to use
 
-First you need to copy the [`slider.js`](https://raw.githubusercontent.com/munozrc/basic-slider/main/src/lib/slider.js) and [`slider.css`](https://raw.githubusercontent.com/munozrc/basic-slider/main/src/lib/slider.css) files to your project.
+First you need to copy the [`slider.js`](https://raw.githubusercontent.com/munozrc/basic-slider/main/src/lib/slider.js) and [`slider.css`](https://raw.githubusercontent.com/munozrc/basic-slider/main/src/lib/slider.css) files to your project, then import them into your `index.html` file or directly into a `main.js` file in your project.
 
 ***HTML***
 
