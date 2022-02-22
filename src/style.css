@@ -22,11 +22,12 @@ main {
   width: 100%;
   height: fit-content;
   max-width: 1200px;
+  padding: 20px;
 }
 
 img {
   width: 100%;
   object-fit: cover;
-  max-height: 350px;
+  height: 350px;
   border-radius: 12px;
 }
